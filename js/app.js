@@ -23,7 +23,7 @@ let noResults;
 
 //Get data from TVmaze API
 const getData = (path, query) => {
-  fetch(`http://api.tvmaze.com${path}${query}`)
+  fetch(`https://api.tvmaze.com${path}${query}`)
     .then((response) =>
       response.ok ? response.json() : Promise.reject(response)
     )
