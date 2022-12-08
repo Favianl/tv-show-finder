@@ -1,0 +1,99 @@
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  --bs-body-font-family: 'Roboto', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.loader {
+  display: block;
+  margin: 0 auto;
+  filter: invert(1);
+}
+
+.pagination-wrap {
+  display: none;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.page-item {
+  user-select: none;
+}
+
+.prev-pages {
+  display: none;
+}
+
+.card {
+  overflow: hidden;
+}
+
+.card *::-webkit-scrollbar {
+  width: 5px;
+}
+
+.card *::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+.card-body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fcfcfc;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s;
+}
+
+.card:hover .card-body {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card-title {
+  max-height: 120px;
+  overflow-y: auto;
+  font-size: 1.3rem;
+}
+
+.info-card {
+  position: absolute;
+  top: 100%;
+  right: 5px;
+  left: 5px;
+  transform: translateY(-100%);
+}
+
+.card-text {
+  height: 80px;
+  font-size: 0.9rem;
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 767px) {
+  .container-fluid .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-prev,
+  .btn-next {
+    display: none;
+  }
+}
